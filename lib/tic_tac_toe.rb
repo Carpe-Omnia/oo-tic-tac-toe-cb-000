@@ -121,7 +121,7 @@ class TicTacToe
   end
 
   def over?
-    if won?( != false
+    if won? != false
       return true
     elsif full? == true
       return true

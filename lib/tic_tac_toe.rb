@@ -111,7 +111,7 @@ class TicTacToe
       space == 'X' || space == 'O'
     end
   end
-  
+
   def draw?
     if full? == true && won? == false
       return true
@@ -131,5 +131,20 @@ class TicTacToe
       return false
     end
   end
-  
+
+  def winner
+    value = won?
+    if value == false
+      return nil
+    else
+      something = value[0]
+      spot = @board[something]
+      if spot == "X"
+        return "X"
+      else
+        return "O"
+      end
+    end
+  end
+
 end
